@@ -1,6 +1,4 @@
-﻿// Fill out your copyright notice in the Description page of Project Settings.
-
-
+﻿
 #include "RougeCharacter.h"
 
 #include "EnhancedInputComponent.h"
@@ -10,11 +8,9 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/GameplayStatics.h"
 
-
-// Sets default values
 ARougeCharacter::ARougeCharacter()
 {
-	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	
 	PrimaryActorTick.bCanEverTick = true;
 	
 	SpringArmComponent=CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
@@ -27,20 +23,18 @@ ARougeCharacter::ARougeCharacter()
 	PrimaryAttackSocketName=TEXT("Muzzle_01");
 }
 
-// Called when the game starts or when spawned
+
 void ARougeCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
 
-// Called every frame
 void ARougeCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
 
-// Called to bind functionality to input
 void ARougeCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
